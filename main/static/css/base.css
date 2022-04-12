@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+nav{
+    background-color: forestgreen;
+    width: 18vw;
+    height: 100%;
+}
+
+nav ul li{
+    list-style-type: none;
+    text-align: center;
+    border: 1px solid black;
+    transition: 100ms ease-in;
+    transform-origin: left;
+}
+
+nav ul li:hover{
+    background-color: darkgreen;
+}
+
+nav a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main a{
+    text-decoration: underline green;
+    color: darkorchid;
+}
+
+nav ul{
+    padding: 0;
+}
+
+main{
+    background-color: lawngreen;
+    padding-left: 2rem;
+    flex-grow: 1;
+}
+
+main ul{
+    list-style-position: none;
+}
+
+button{
+    cursor: pointer;
+}

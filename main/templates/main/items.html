@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{lst}}</h1>
+{% if items %}
+{% else %}
+<p>You have nothing to do for this list. Create some here</p>
+{% endif %}
+<form method = "POST">
+    {% csrf_token %}
+    {% for item in items %}
+        <ul>
+            {% if item.completed == True %}
+                <li>{{ item }}<input type = "checkbox" value = "clicked" name = "c{{item.id}}" checked></li>
+            {% else %}    
+                <li>{{ item }}<input type = "checkbox" value = "clicked" name = "c{{item.id}}"></li>
+            {% endif %}
+        </ul>
+    {% endfor %}
+    <input type = "text" name = "newItem" value = "Enter Item">
+    <button type = "submit" name = "addNewItem" value = "addNewItem">Add Item</button>
+    <button type = "submit" name = "save" value = "save">Save</button>
+</form>
+{% endblock %}

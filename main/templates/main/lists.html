@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if lists %}
+    {% for list in lists %}
+        <h2><a href = "{{list.id}}">{{ list }}</a></h2>
+    {% endfor %}
+{% else %}
+    <p>All your tasks are done for the day : ) To create more tasks, click <a href = "#">here</a>!</p>
+{% endif %}
+{% endblock %}
