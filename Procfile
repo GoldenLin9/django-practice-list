@@ -1,0 +1,1 @@
+web: gunicorn List.wsgi --log-file -
